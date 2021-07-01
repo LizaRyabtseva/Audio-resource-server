@@ -48,7 +48,7 @@ exports.getSong = async (req, res, next) => {
                         year: c.date.getFullYear(),
                         month: c.date.getMonth() + 1 >=10 ? c.date.getMonth() + 1 : `0${c.date.getMonth() + 1}`,
                         day: c.date.getDate() >=10 ? c.date.getDate() : `0${c.date.getDate()}`,
-                        hour: c.date.getHours(),
+                        hour: c.date.getHours() >=10 ? c.date.getHours(): `0${c.date.getHours()}`,
                         minutes: c.date.getMinutes()
                     }
                 })
